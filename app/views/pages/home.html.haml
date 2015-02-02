@@ -1,2 +1,4 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+.jumbotron
+  %h1 Welcome to our store
+  = link_to 'Books', '#', class: 'btn btn-primary btn-block'
+  = link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary btn-block'
