@@ -8,4 +8,7 @@
   %body
     = render partial: 'layouts/header'
     .container
+      - flash.each do |type, message|
+        .alert.alert-info
+          = message
       = yield
