@@ -1,0 +1,10 @@
+%table.table.table-condensed
+  %thead
+    %tr
+      %th Name
+      %th Date
+  %tbody
+    - @purchased.each do |sale|
+      %tr
+        %td= sale.inspect
+        %td

@@ -7,6 +7,8 @@ class PagesController < ApplicationController
 
   def dashboard
     @books = current_user.books
+    @purchased = []
+    @sales = []
   end
 
 end
