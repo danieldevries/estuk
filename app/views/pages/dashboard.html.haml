@@ -1,2 +1,14 @@
-.row
-  %h1.text-center Dashboard
+.container
+  .row
+    %h1 Dashboard
+    = link_to 'New Book', new_book_path, class: 'btn btn-primary btn-sm'
+    .clearfix
+    .col-md-4
+      %h4 Books
+      = render 'books'
+    .col-md-4
+      %h4 Purchased
+      = render 'purchased'
+    .col-md-4
+      %h4 Sales
+      = render 'sales'

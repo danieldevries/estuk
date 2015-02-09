@@ -7,5 +7,6 @@
   %tbody
     - @sales.each do |sale|
       %tr
-        %td= sale.inspect
-        %td
+        %td= link_to sale.book.name, pickup_path(guid: sale.guid)
+        %td= time_ago_in_words(sale.created_at)
+        %td= sale.buyer_email
