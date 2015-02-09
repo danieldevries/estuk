@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'cancan'
 gem 'paperclip'
+gem 'paperclip-dropbox'
 gem 'friendly_id'
 
 group :development, :test do
