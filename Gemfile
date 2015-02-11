@@ -18,6 +18,7 @@ gem 'cancan'
 gem 'paperclip'
 gem 'paperclip-dropbox'
 gem 'friendly_id'
+gem 'aasm'
 
 group :development, :test do
   gem 'byebug'

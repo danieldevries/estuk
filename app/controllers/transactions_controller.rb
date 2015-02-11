@@ -6,8 +6,13 @@ class TransactionsController < ApplicationController
       buyer_email: current_user.email,
       seller_email: book.user.email
     )
+    sale.charge!
 
-    redirect_to pickup_path(guid: sale.guid)
+    if sale.finished?
+      redirect_to pickup_path(guid: sale.guid), notice: 'success!'
+    else
+      redirect_to book_path(book), 'something went wrong'
+    end
   end
 
   def pickup
